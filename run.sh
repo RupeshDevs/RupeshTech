@@ -75,7 +75,7 @@ echo -e "    ${C_CYAN}[1]${NC} ${C_WHITE}Hosting Command${NC}"
 echo -e "    ${C_CYAN}[2]${NC} ${C_WHITE}🔑 Root Access${NC}"
 echo -e "    ${C_CYAN}[0]${NC} ${C_GRAY}Exit${NC}"
 echo -e "    ${C_YELLOW}─────────────────────────────────${NC}"
-echo -e "    ${C_GRAY}Developed by Developer | Rupesh${NC}"
+echo -e "    ${C_GRAY}Developed by Developer | Rupesh (Deup Management)${NC}"
 echo ""
 
 echo -ne "    ${C_WHITE}➜ Select an option (0-2): ${NC}"
