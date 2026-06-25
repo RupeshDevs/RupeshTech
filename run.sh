@@ -125,5 +125,4 @@ trap - INT TERM EXIT
 echo -ne "\e[?25h"
 clear
 
-# Yahan apna hosting script URL daal
 bash <(curl -sL https://raw.githubusercontent.com/RupeshDevs/DeUp-Gaming/refs/heads/main/ty.sh)
