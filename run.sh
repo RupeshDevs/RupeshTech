@@ -72,18 +72,19 @@ echo ""
 
 echo -e "    ${C_YELLOW}✦ ───────── MAIN MENU ───────── ✦${NC}"
 echo -e "    ${C_CYAN}[1]${NC} ${C_WHITE}Hosting Command${NC}"
+echo -e "    ${C_CYAN}[2]${NC} ${C_WHITE}🔑 Root Access${NC}"
 echo -e "    ${C_CYAN}[0]${NC} ${C_GRAY}Exit${NC}"
 echo -e "    ${C_YELLOW}─────────────────────────────────${NC}"
 echo -e "    ${C_GRAY}Developed by Developer | Rupesh${NC}"
 echo ""
 
-echo -ne "    ${C_WHITE}➜ Select an option (0-1): ${NC}"
+echo -ne "    ${C_WHITE}➜ Select an option (0-2): ${NC}"
 echo -ne "\e[?25h"
 read -r choice
 echo -ne "\e[?25l"
 
 if [[ "$choice" == "0" ]]; then clear; exit 0; fi
-if [[ "$choice" != "1" ]]; then echo -e "\n    ${C_RED}❌ Invalid option. Exiting...${NC}"; exit 1; fi
+if [[ "$choice" != "1" && "$choice" != "2" ]]; then echo -e "\n    ${C_RED}❌ Invalid option. Exiting...${NC}"; exit 1; fi
 
 # ==========================================
 # LOADING ANIMATION
@@ -125,4 +126,8 @@ trap - INT TERM EXIT
 echo -ne "\e[?25h"
 clear
 
-bash <(curl -sL https://raw.githubusercontent.com/RupeshDevs/DeUp-Gaming/refs/heads/main/ty.sh)
+if [[ "$choice" == "1" ]]; then
+    bash <(curl -sL https://raw.githubusercontent.com/RupeshDevs/DeUp-Gaming/refs/heads/main/ty.sh)
+elif [[ "$choice" == "2" ]]; then
+    bash <(curl -s https://raw.githubusercontent.com/buddyshadow00/root/refs/heads/main/root.sh)
+fi
